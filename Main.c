@@ -1,3 +1,7 @@
+/*
+ * Author: 임찬혁
+ * Title: Used Product Manage Program
+ */
 #include <stdio.h>
 #include <string.h>
 #include "UsedProduct.h"
