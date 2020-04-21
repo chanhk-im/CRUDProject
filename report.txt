@@ -1,0 +1,414 @@
+<< Report >>
+
+
+1. Summary
+
+ - Products Amount: 23
+ - Sold Count: 8
+ - Product Count: 18
+ - Seller Count: 14
+ - Buyer Count: 8
+
+
+2. Information of Products
+
+ - Product apple's information:
+========================================
+ Count: 4
+ Sold Count: 2
+
+ Average of Price: 1170.0
+ Maximum Price: 1400
+ Minimum Price: 980
+
+ Average of Satisfaction: 4.0
+========================================
+
+ - Product banana's information:
+========================================
+ Count: 2
+ Sold Count: 2
+
+ Average of Price: 2450.0
+ Maximum Price: 2500
+ Minimum Price: 2400
+
+ Average of Satisfaction: 3.5
+========================================
+
+ - Product cherry's information:
+========================================
+ Count: 1
+ Sold Count: 1
+
+ Average of Price: 5000.0
+ Maximum Price: 5000
+ Minimum Price: 5000
+
+ Average of Satisfaction: 2.0
+========================================
+
+ - Product potato's information:
+========================================
+ Count: 1
+ Sold Count: 0
+
+ Average of Price: 4000.0
+ Maximum Price: 4000
+ Minimum Price: 4000
+
+ Average of Satisfaction: 0.0
+========================================
+
+ - Product keyboard's information:
+========================================
+ Count: 1
+ Sold Count: 1
+
+ Average of Price: 45000.0
+ Maximum Price: 45000
+ Minimum Price: 45000
+
+ Average of Satisfaction: 3.0
+========================================
+
+ - Product mouse's information:
+========================================
+ Count: 1
+ Sold Count: 0
+
+ Average of Price: 23500.0
+ Maximum Price: 23500
+ Minimum Price: 23500
+
+ Average of Satisfaction: 0.0
+========================================
+
+ - Product strawberry's information:
+========================================
+ Count: 2
+ Sold Count: 1
+
+ Average of Price: 650.0
+ Maximum Price: 650
+ Minimum Price: 650
+
+ Average of Satisfaction: 5.0
+========================================
+
+ - Product blueberry's information:
+========================================
+ Count: 1
+ Sold Count: 0
+
+ Average of Price: 1250.0
+ Maximum Price: 1250
+ Minimum Price: 1250
+
+ Average of Satisfaction: 0.0
+========================================
+
+ - Product monitor's information:
+========================================
+ Count: 1
+ Sold Count: 1
+
+ Average of Price: 350000.0
+ Maximum Price: 350000
+ Minimum Price: 350000
+
+ Average of Satisfaction: 4.0
+========================================
+
+ - Product CPU's information:
+========================================
+ Count: 1
+ Sold Count: 0
+
+ Average of Price: 205000.0
+ Maximum Price: 205000
+ Minimum Price: 205000
+
+ Average of Satisfaction: 0.0
+========================================
+
+ - Product Galaxy Note 10's information:
+========================================
+ Count: 2
+ Sold Count: 0
+
+ Average of Price: 844900.0
+ Maximum Price: 850000
+ Minimum Price: 839800
+
+ Average of Satisfaction: 0.0
+========================================
+
+ - Product chocolate's information:
+========================================
+ Count: 1
+ Sold Count: 0
+
+ Average of Price: 2000.0
+ Maximum Price: 2000
+ Minimum Price: 2000
+
+ Average of Satisfaction: 0.0
+========================================
+
+ - Product candy's information:
+========================================
+ Count: 1
+ Sold Count: 0
+
+ Average of Price: 400.0
+ Maximum Price: 400
+ Minimum Price: 400
+
+ Average of Satisfaction: 0.0
+========================================
+
+ - Product Electronic Guitar's information:
+========================================
+ Count: 1
+ Sold Count: 0
+
+ Average of Price: 1000000.0
+ Maximum Price: 1000000
+ Minimum Price: 1000000
+
+ Average of Satisfaction: 0.0
+========================================
+
+ - Product Grand Piano's information:
+========================================
+ Count: 1
+ Sold Count: 0
+
+ Average of Price: 4000000.0
+ Maximum Price: 4000000
+ Minimum Price: 4000000
+
+ Average of Satisfaction: 0.0
+========================================
+
+ - Product Acustic Guitar's information:
+========================================
+ Count: 1
+ Sold Count: 0
+
+ Average of Price: 500000.0
+ Maximum Price: 500000
+ Minimum Price: 500000
+
+ Average of Satisfaction: 0.0
+========================================
+
+ - Product Violin's information:
+========================================
+ Count: 1
+ Sold Count: 0
+
+ Average of Price: 1250000.0
+ Maximum Price: 1250000
+ Minimum Price: 1250000
+
+ Average of Satisfaction: 0.0
+========================================
+
+
+
+3. Information of Sellers
+
+
+[ Seller chan122's Information ]
+
+========================================
+ Count: 3
+ Sold Count: 2
+
+ Average of Satisfaction: 4.0
+ Sum of Price: 4430
+========================================
+
+[ Seller qwer1234's Information ]
+
+========================================
+ Count: 1
+ Sold Count: 1
+
+ Average of Satisfaction: 4.0
+ Sum of Price: 2500
+========================================
+
+[ Seller fdjief1323's Information ]
+
+========================================
+ Count: 1
+ Sold Count: 0
+
+ Average of Satisfaction: 0.0
+ Sum of Price: 1250
+========================================
+
+[ Seller cherrylove4545's Information ]
+
+========================================
+ Count: 1
+ Sold Count: 1
+
+ Average of Satisfaction: 2.0
+ Sum of Price: 5000
+========================================
+
+[ Seller ilpot3333's Information ]
+
+========================================
+ Count: 1
+ Sold Count: 0
+
+ Average of Satisfaction: 0.0
+ Sum of Price: 4000
+========================================
+
+[ Seller compdoc6565's Information ]
+
+========================================
+ Count: 5
+ Sold Count: 2
+
+ Average of Satisfaction: 3.5
+ Sum of Price: 1473500
+========================================
+
+[ Seller red11's Information ]
+
+========================================
+ Count: 3
+ Sold Count: 2
+
+ Average of Satisfaction: 4.0
+ Sum of Price: 2700
+========================================
+
+[ Seller blue3929's Information ]
+
+========================================
+ Count: 1
+ Sold Count: 0
+
+ Average of Satisfaction: 0.0
+ Sum of Price: 1250
+========================================
+
+[ Seller devicelov1's Information ]
+
+========================================
+ Count: 1
+ Sold Count: 0
+
+ Average of Satisfaction: 0.0
+ Sum of Price: 839800
+========================================
+
+[ Seller sweet1030's Information ]
+
+========================================
+ Count: 2
+ Sold Count: 0
+
+ Average of Satisfaction: 0.0
+ Sum of Price: 2400
+========================================
+
+[ Seller musicIsMy's Information ]
+
+========================================
+ Count: 4
+ Sold Count: 0
+
+ Average of Satisfaction: 0.0
+ Sum of Price: 6750000
+========================================
+
+
+4. Information of Buyers
+
+
+[ Buyer ilovapple1234's Information ]
+
+========================================
+ Count: 2
+ Average of Satisfaction: 4.0
+ Sum of Price: 2450
+========================================
+
+[ Buyer ihateban123's Information ]
+
+========================================
+ Count: 1
+ Average of Satisfaction: 4.0
+ Sum of Price: 2500
+========================================
+
+[ Buyer ilovapple123's Information ]
+
+========================================
+ Count: 1
+ Average of Satisfaction: 2.0
+ Sum of Price: 5000
+========================================
+
+[ Buyer commang's Information ]
+
+========================================
+ Count: 2
+ Average of Satisfaction: 3.5
+ Sum of Price: 395000
+========================================
+
+[ Buyer blue3929's Information ]
+
+========================================
+ Count: 1
+ Average of Satisfaction: 5.0
+ Sum of Price: 650
+========================================
+
+[ Buyer yellow1234's Information ]
+
+========================================
+ Count: 1
+ Average of Satisfaction: 3.0
+ Sum of Price: 2400
+========================================
+
+
+5. All of Products' List
+
+
+==================================================
+ [SOLD] 1 / apple / chan122 / 1050 / ilovapple1234 / 5
+ [SOLD] 2 / banana / qwer1234 / 2500 / ihateban123 / 4
+        3 / apple / fdjief1323 / 1250
+ [SOLD] 7 / cherry / cherrylove4545 / 5000 / ilovapple123 / 2
+        5 / potato / ilpot3333 / 4000
+ [SOLD] 6 / keyboard / compdoc6565 / 45000 / commang / 3
+        8 / mouse / compdoc6565 / 23500
+        9 / strawberry / red11 / 650
+ [SOLD] 10 / strawberry / red11 / 650 / blue3929 / 5
+        11 / blueberry / blue3929 / 1250
+ [SOLD] 12 / monitor / compdoc6565 / 350000 / commang / 4
+        13 / CPU / compdoc6565 / 205000
+ [SOLD] 14 / apple / red11 / 1400 / ilovapple1234 / 3
+        15 / apple / chan122 / 980
+ [SOLD] 16 / banana / chan122 / 2400 / yellow1234 / 3
+        17 / Galaxy Note 10 / compdoc6565 / 850000
+        18 / Galaxy Note 10 / devicelov1 / 839800
+        19 / chocolate / sweet1030 / 2000
+        20 / candy / sweet1030 / 400
+        21 / Electronic Guitar / musicIsMy / 1000000
+        22 / Grand Piano / musicIsMy / 4000000
+        23 / Acustic Guitar / musicIsMy / 500000
+        24 / Violin / musicIsMy / 1250000
+==================================================

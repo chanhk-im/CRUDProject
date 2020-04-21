@@ -248,7 +248,16 @@ void PUpdatePurchase(Product *p, char *pro, char *s, int pri, char *b, int sat)
 
 void ProductRemove(Product *p)
 {
-
+	for (int i = 0; i < p_length; i++)
+	{
+		if (products[i] == p)
+		{
+			free(products[i]);
+			products[i] = NULL;
+			p_count -= 1;
+			return;
+		}
+	}
 }
 
 void PRemoveAll()
@@ -277,11 +286,33 @@ void ProductCollect()
 	}
 }
 
-void ProductSwap(Product **p1, Product **p2)
+void ProductSwap(int i1, int i2)
 {
-	Product *temp = *p1;
-	*p1 = *p2;
-	*p2 = temp;
+	Product *temp = products[i1];
+	products[i1] = products[i2];
+	products[i2] = temp;
+}
+
+void ProductSort(int (*comp)(Product *p1, Product *p2))
+{
+	ProductCollect();
+
+	for (int i = 0; i < p_length - 1; i++)
+	{
+		for (int j = i + 1; j < p_length; j++)
+		{
+#ifdef DEBUG
+			printf("[DEBUG] %s %s %d\n", products[i]->p_name, products[j]->p_name, comp(products[i], products[j]));
+#endif
+			 if (comp(products[i], products[j]) == 1)
+			 {
+				 ProductSwap(i, j);
+#ifdef DEBUG
+				 printf("[DEBUG] swap %s %s\n", products[i]->p_name, products[j]->p_name);
+#endif
+			 }
+		}
+	}
 }
 
 char *GetStringToSave(Product *p)

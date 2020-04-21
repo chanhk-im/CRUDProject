@@ -41,5 +41,6 @@ void PUpdatePurchase(Product *p, char *pro, char *s, int pri, char *b, int sat);
 void ProductRemove(Product *p);
 void PRemoveAll();
 void ProductCollect();
-void ProductSwap(Product **p1, Product **p2);
+void ProductSwap(int i1, int i2);
+void ProductSort(int (*comp)(Product *p1, Product *p2));
 char *GetStringToSave(Product *p);

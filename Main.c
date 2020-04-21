@@ -1,8 +1,9 @@
 /*
- * Author: 임찬혁
+ * Author: 임찬혁a
  * Title: Used Product Manage Program
  */
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "UsedProduct.h"
 
@@ -10,6 +11,7 @@ void CreateRecord();
 void ReadRecord();
 void UpdateRecord();
 void PurchaseRecord();
+void DeleteRecord();
 void SearchRecord();
 void SearchByPName();
 void SearchBySName();
@@ -18,8 +20,11 @@ void LoadRecord();
 void SaveRecord();
 void CreateReport();
 void Settings();
+void SortRecord();
 void Debug();
-void _ShowAll();
+void ShowAll();
+int CompByID(Product *p1, Product *p2);
+int CompByPName(Product *p1, Product *p2);
 
 int main()
 {
@@ -32,7 +37,7 @@ int main()
 		printf("\n[Menu] Input a number to select.\n");
 		printf("===============================================\n");
 		printf("1. Create  2. Read  3. Update  4. Purchase\n");
-		printf("5. Search  X. Delete  7. Load  8. Save\n");
+		printf("5. Search  6. Delete  7. Load  8. Save\n");
 		printf("9. Report   10. Setting   0. Exit\n");
 		printf("===============================================\n");
 		printf(">> ");
@@ -60,6 +65,10 @@ int main()
 			SearchRecord();
 			break;
 
+		case 6:
+			DeleteRecord();
+			break;
+
 		case 7:
 			LoadRecord();
 			break;
@@ -81,11 +90,7 @@ int main()
 			Debug();
 			break;
 #endif
-
-		case 33:
-			_ShowAll();
-			break;
-
+		
 		case 0:
 		default:
 			break;
@@ -126,7 +131,7 @@ void CreateRecord()
 	
 	if (ProductAdd(-1, prod, sell, price, FALSE, &id))
 	{
-		printf("\n[Create] Success to add a product!\n");
+		printf("\n[Create] Succeeded to add a product!\n");
 		printf("[Create] Your ID is %d, please don't forget it!\n", id);
 	}
 	else
@@ -273,10 +278,41 @@ void PurchaseRecord()
 #ifdef DEBUG
 		printf("\n[DEBUG] Data updated to %s\n", PToString(find));
 #endif
-		printf("\n[Purchase] Successed to purchase a product!\n");
+		printf("\n[Purchase] Succeeded to purchase a product!\n");
 	}
 	else
 		printf("[Purchase] This product was already purchased...\n");
+}
+
+void DeleteRecord()
+{
+	int id, yes;
+	Product *find;
+
+	printf("\n<< Delete >>\n");
+	printf("\n[Delete] Input id to remove\n");
+	printf(">> ");
+	scanf("%d", &id);
+	find = PFindByID(id);
+
+	if (find == NULL)
+	{
+		printf("\n[Delete] Not found!\n");
+		return;
+	}
+	
+	printf("\n[Delete] A data is found! > %s\n", PToString(find));
+	printf("[Delete] Do you want to remove this data?\n");
+	printf("================\n");
+	printf("1. Yes  2. No\n");
+	printf("================\n");
+	printf(">> ");
+	scanf("%d", &yes);
+	if (yes == 2)
+		return;
+
+	ProductRemove(find);
+	printf("[Delete] Succeeded to remove this record!\n");
 }
 
 void SearchRecord()
@@ -336,6 +372,12 @@ void SearchByPName()
 
 	Product *all[GetCapacity()];
 	PGetAllByPName(all, p_name);
+	
+	if (all[0] == NULL)
+	{
+		printf("\n[Search] This product name is not exist!\n");
+		return;
+	}
 
 	for (int i = 0; all[i] != NULL; i++)
 	{
@@ -408,6 +450,12 @@ void SearchBySName()
 	Product *all[GetCapacity()];
 	PGetAllBySName(all, s_name);
 
+	if (all[0] == NULL)
+	{
+		printf("\n[Search] This seller name is not exist!\n");
+		return;
+	}
+
 	for (int i = 0; i < GetLength() && all[i] != NULL; i++)
 	{
 		cnt += 1;
@@ -459,6 +507,12 @@ void SearchByBName()
 
 	Product *all[GetCapacity()];
 	PGetAllByBName(all, b_name);
+
+	if (all[0] == NULL)
+	{
+		printf("\n[Search] This buyer name is not exist!\n");
+		return;
+	}
 
 	for (int i = 0; i < GetLength() && all[i] != NULL; i++)
 	{
@@ -895,6 +949,7 @@ void CreateReport()
 			fprintf(f, " %s\n", PToString(all[i]));
 	}
 	fprintf(f, "==================================================\n");
+	fclose(f);
 }
 
 void Settings()
@@ -905,9 +960,9 @@ void Settings()
 	{
 		printf("\n<< Setting >>\n");
 		printf("\n[Setting] Input a number to select.\n");
-		printf("=================================\n");
-		printf("1. Collect  X. Sort  0. Exit\n");
-		printf("=================================\n");
+		printf("===========================================\n");
+		printf("1. Collect  2. Sort  3. Show All  0. Exit\n");
+		printf("===========================================\n");
 		printf(">> ");
 		scanf("%d", &menu);
 
@@ -928,9 +983,45 @@ void Settings()
 #endif
 			}
 		}
+		else if (menu == 2)
+		{
+			SortRecord();
+		}
+		else if (menu == 3)
+		{
+			ShowAll();
+		}
 		else if (menu == 0)
 			return;
 	}
+}
+
+void SortRecord()
+{
+	int yes, menu;
+
+	printf("[Setting 2] Do you want to sort this record?\n"); 
+	printf("================\n");
+	printf("1. Yes  2. No\n");
+	printf("================\n");
+	printf(">> ");
+	scanf("%d", &yes);
+	if (yes == 2)
+		return;
+	
+	printf("\n[Setting 2] Input a number to select.\n");
+	printf("=================================\n");
+	printf("1. ID  2. Product's name\n");
+	printf("=================================\n");
+	printf(">> ");
+	scanf("%d", &menu);
+
+	if (menu == 1)
+		ProductSort(CompByID);
+	else if (menu == 2)
+		ProductSort(CompByPName);
+	else
+		return;
 }
 
 void Debug()
@@ -947,14 +1038,31 @@ void Debug()
 	*/
 }
 
-void _ShowAll()
+void ShowAll()
 {
 	Product *all[GetCapacity()];
 	PGetAll(all);
 	for (int i = 0; i < GetLength(); i++)
 	{
 		if (IsAvailable(all[i]))
-			printf("%s\n", PToString(all[i]));
+			printf("%d. %s\n", i + 1, PToString(all[i]));
 	}
+#ifdef DEBUG
 	printf("[DEBUG] Success!\n");
+#endif
+}
+
+int CompByID(Product *p1, Product *p2)
+{
+	if (PGetID(p1) < PGetID(p2))
+		return -1;
+	else if (PGetID(p1) == PGetID(p2))
+		return 0;
+	else
+		return 1;
+}
+
+int CompByPName(Product *p1, Product *p2)
+{
+	return strcmp(PGetPName(p1), PGetPName(p2)) > 0;
 }
